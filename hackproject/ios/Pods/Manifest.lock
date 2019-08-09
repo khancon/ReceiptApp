@@ -81,6 +81,14 @@ PODS:
   - React-RCTWebSocket (0.60.0-rc.3):
     - React-Core (= 0.60.0-rc.3)
     - React-fishhook (= 0.60.0-rc.3)
+  - RNGestureHandler (1.3.0):
+    - React
+  - RNReanimated (1.2.0):
+    - React
+  - RNSVG (9.6.2):
+    - React
+  - RNVectorIcons (6.6.0):
+    - React
   - yoga (0.60.0-rc.3.React)
 
 DEPENDENCIES:
@@ -105,6 +113,10 @@ DEPENDENCIES:
   - React-RCTText (from `../node_modules/react-native/Libraries/Text`)
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-RCTWebSocket (from `../node_modules/react-native/Libraries/WebSocket`)
+  - RNGestureHandler (from `/Users/chloe/Desktop/ReceiptApp/hackproject/node_modules/react-native-gesture-handler`)
+  - RNReanimated (from `/Users/chloe/Desktop/ReceiptApp/hackproject/node_modules/react-native-reanimated`)
+  - RNSVG (from `../node_modules/react-native-svg`)
+  - RNVectorIcons (from `/Users/chloe/Desktop/ReceiptApp/hackproject/node_modules/react-native-vector-icons`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -154,6 +166,14 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   React-RCTWebSocket:
     :path: "../node_modules/react-native/Libraries/WebSocket"
+  RNGestureHandler:
+    :path: "/Users/chloe/Desktop/ReceiptApp/hackproject/node_modules/react-native-gesture-handler"
+  RNReanimated:
+    :path: "/Users/chloe/Desktop/ReceiptApp/hackproject/node_modules/react-native-reanimated"
+  RNSVG:
+    :path: "../node_modules/react-native-svg"
+  RNVectorIcons:
+    :path: "/Users/chloe/Desktop/ReceiptApp/hackproject/node_modules/react-native-vector-icons"
   yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -180,8 +200,12 @@ SPEC CHECKSUMS:
   React-RCTText: 01336645c594ee588f1062669db0cd03b90210c7
   React-RCTVibration: 9f1e51e8bda236fd1f3731dfcd2d9a56a2f1d2f0
   React-RCTWebSocket: 60bf0bda42593572fa713ec7331e6ddab1ef5c3e
+  RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
+  RNReanimated: 1b52415c4302f198cb581282a0166690bad62c43
+  RNSVG: ff9b094e39dd4a437ebe17d1c7ceed286e75f426
+  RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   yoga: a5405b41017fb27727de7a5ceab8bf55f98bbe2f
 
-PODFILE CHECKSUM: 1f8b13ae1d6a841d3c0bc5063fb04cac9601cd46
+PODFILE CHECKSUM: f8878e152aa5b06d45118eca1a12d14b91b602f8
 
 COCOAPODS: 1.7.3
