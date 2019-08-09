@@ -10,9 +10,22 @@ import {
 import Svg, { Path } from "react-native-svg";
 import MaterialIconButtonsFooter from "../symbols/MaterialIconButtonsFooter";
 import CupertinoFooter1 from "../symbols/CupertinoFooter1";
+import ReactDOM from 'react-dom';
+import * as V from 'victory';
+import { VictoryBar, VictoryChart } from 'victory-native';
+
 
 export default class HomePage extends Component {
   render() {
+    const data = [
+      {time: "sun", spent: 500},
+      {time: "mon", spent: 200},
+      {time: "tue", spent: 150},
+      {time: "wed", spent: 400},
+      {time: "thu", spent: 350},
+      {time: "fri", spent: 41},
+      {time: "sat", spent: 500},
+    ];
     return (
       <View style={styles.root}>
         <View style={styles.topNav}>
@@ -38,28 +51,15 @@ export default class HomePage extends Component {
           <Text style={styles.style2}>153</Text>
         </View>
         <View style={styles.barChart}>
-          <Svg viewBox={"-2.5 -2.5 360 11"} style={styles.line}>
-            <Path
-              strokeWidth={5}
-              fill={"rgba(247,227,234,1)"}
-              stroke={"rgba(247,227,234,1)"}
-              d={"M2.50 3.00 C352.50 3.00 352.50 3.00 352.50 3.00 L2.50 3.00 Z"}
+          <VictoryChart>
+            <VictoryBar
+              data={data}
+              // data accessor for x values
+              x="time"
+              // data accessor for y values
+              y="spent"
             />
-          </Svg>
-          <View style={styles.rectangle1} />
-          <View style={styles.rectangle2} />
-          <View style={styles.rectangle3} />
-          <View style={styles.rectangle4} />
-          <View style={styles.rectangle5} />
-          <View style={styles.rectangle6} />
-          <View style={styles.rectangle7} />
-          <Text style={styles.sat}>Sat</Text>
-          <Text style={styles.sun}>Sun</Text>
-          <Text style={styles.mon}>Mon</Text>
-          <Text style={styles.tu}>Tu</Text>
-          <Text style={styles.wed}>Wed</Text>
-          <Text style={styles.th}>Th</Text>
-          <Text style={styles.fri}>Fri</Text>
+          </VictoryChart>
         </View>
         <View style={styles.groceries}>
           <Svg
@@ -219,10 +219,10 @@ const styles = StyleSheet.create({
     letterSpacing: 4
   },
   barChart: {
-    top: "46.99%",
-    left: "7.73%",
-    width: "84.54%",
-    height: "17.86%",
+    top: "30%",
+    left: "3.73%",
+    width: "30.54%",
+    height: "3.86%",
     position: "absolute"
   },
   line: {
@@ -289,62 +289,6 @@ const styles = StyleSheet.create({
     height: "74.38%",
     backgroundColor: "rgba(61,85,104,1)",
     position: "absolute"
-  },
-  sat: {
-    top: "84.38%",
-    left: "3.43%",
-    color: "rgba(167,205,204,1)",
-    position: "absolute",
-    fontSize: 18,
-    fontFamily: "avenir-roman"
-  },
-  sun: {
-    top: "84.38%",
-    left: "16.86%",
-    color: "rgba(167,205,204,1)",
-    position: "absolute",
-    fontSize: 18,
-    fontFamily: "avenir-roman"
-  },
-  mon: {
-    top: "84.38%",
-    left: "31.14%",
-    color: "rgba(167,205,204,1)",
-    position: "absolute",
-    fontSize: 18,
-    fontFamily: "avenir-roman"
-  },
-  tu: {
-    top: "84.38%",
-    left: "47.43%",
-    color: "rgba(167,205,204,1)",
-    position: "absolute",
-    fontSize: 18,
-    fontFamily: "avenir-roman"
-  },
-  wed: {
-    top: "84.38%",
-    left: "59.43%",
-    color: "rgba(167,205,204,1)",
-    position: "absolute",
-    fontSize: 18,
-    fontFamily: "avenir-roman"
-  },
-  th: {
-    top: "84.38%",
-    left: "76.00%",
-    color: "rgba(167,205,204,1)",
-    position: "absolute",
-    fontSize: 18,
-    fontFamily: "avenir-roman"
-  },
-  fri: {
-    top: "84.38%",
-    left: "89.43%",
-    color: "rgba(167,205,204,1)",
-    position: "absolute",
-    fontSize: 18,
-    fontFamily: "avenir-roman"
   },
   groceries: {
     top: "65.4%",

@@ -4,6 +4,7 @@ import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 import HomePage from './screens/Home.js';
 import PurchasesPage from './screens/Purchases.js'
 import DashboardPage from './screens/Dashboard.js'
+import ProfilePage from './screens/Profile.js'
 
 class HomeScreen extends React.Component {
   render() {
@@ -32,9 +33,7 @@ class AnalyticsScreen extends React.Component {
 class ProfileScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Profile!</Text>
-      </View>
+      <ProfilePage />
     );
   }
 }

@@ -4,8 +4,9 @@ import Svg, { Path } from "react-native-svg";
 import { Center } from "@builderx/utils";
 import CupertinoSearchBarWithMic1 from "../symbols/CupertinoSearchBarWithMic1";
 
-export default class CudosPurchases extends Component {
+export default class PurchasesPage extends Component {
   render() {
+    
     return (
       <View style={styles.root}>
         <View style={styles.purchase1}>
@@ -154,7 +155,6 @@ export default class CudosPurchases extends Component {
             <View style={styles.rectangle10} />
           </Center>
         </View>
-        <CupertinoSearchBarWithMic1 style={styles.cupertinoSearchBarWithMic1} />
       </View>
     );
   }
