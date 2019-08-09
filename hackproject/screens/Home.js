@@ -21,17 +21,12 @@ export default class HomePage extends Component {
     this.handler = this.handler.bind(this);
   }
   handler(newVal) {
-    console.log("button");
     this.setState({
       timespan: newVal
     })
-    console.log("BUTTON PRESSED!")
   }
   render() {
     const timespan = this.state.timespan;
-    console.log("home loaded");
-    // console.log(timespan);
-    console.log("sad");
     const data = [
       {time: "sat", spent: 500},
       {time: "sun", spent: 500},
