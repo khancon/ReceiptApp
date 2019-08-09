@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@builderx/icons": "^0.1.10",
+    "@builderx/utils": "^0.1.6",
     "@expo/vector-icons": "^10.0.3",
     "@unimodules/core": "^3.0.2",
     "@unimodules/react-native-adapter": "^3.0.0",
@@ -43,5 +44,5 @@
     "assets": [
       "./assets/fonts/"
     ]
-  }  
+  }
 }

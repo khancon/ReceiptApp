@@ -1,12 +1,13 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
-import CudosDashboard from './screens/CudosDashboard';
+import HomePage from './screens/Home.js';
+import PurchasesPage from './screens/Purchases.js'
 
 class HomeScreen extends React.Component {
   render() {
     return (
-      <CudosDashboard />
+      <HomePage />
     );
   }
 }
@@ -14,9 +15,7 @@ class HomeScreen extends React.Component {
 class PurchasesScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Purchases!</Text>
-      </View>
+      <PurchasesPage />
     );
   }
 }

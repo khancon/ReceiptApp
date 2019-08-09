@@ -11,7 +11,7 @@ import Svg, { Path } from "react-native-svg";
 import MaterialIconButtonsFooter from "../symbols/MaterialIconButtonsFooter";
 import CupertinoFooter1 from "../symbols/CupertinoFooter1";
 
-export default class CudosDashboard extends Component {
+export default class HomePage extends Component {
   render() {
     return (
       <View style={styles.root}>
