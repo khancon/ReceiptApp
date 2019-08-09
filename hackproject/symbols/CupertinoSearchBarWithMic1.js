@@ -90,11 +90,12 @@ const styles = StyleSheet.create({
   },
   rightIconButton: {
     alignItems: "center",
-    padding: 8
+    margin: 8
   },
   rightButtonText: {
     color: "#FFF",
     fontSize: 15,
-    fontFamily: "arial"
+    fontFamily: "arial",
+    top: -3
   }
 });

@@ -6,14 +6,14 @@ export default class CupertinoFooter1 extends Component {
     return (
       <View style={[styles.root, this.props.style]}>
         <TouchableOpacity style={styles.btnWrapper1}>
-          <Button title="DAY" color="rgba(255,255,255,1)" />
+          <Button onPress = {()=>this.props.handler("day")} title={"DAY"} color="rgba(255,255,255,1)" />
         </TouchableOpacity>
         <TouchableOpacity style={styles.btnWrapper2}>
-          <Button title="WEEKLY" color="rgba(255,255,255,1)" />
+          <Button onPress = {()=>this.props.handler("week")} title="WEEKLY" color="rgba(255,255,255,1)" />
           <Text style={styles.spendingtext}>SPENDING</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.btnWrapper4}>
-          <Button title="MONTH" color="rgba(255,255,255,1)" />
+          <Button onPress = {()=>this.props.handler("month")} title="MONTH" color="rgba(255,255,255,1)" />
         </TouchableOpacity>
       </View>
     );

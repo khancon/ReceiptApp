@@ -10,22 +10,50 @@ import {
 import Svg, { Path } from "react-native-svg";
 import MaterialIconButtonsFooter from "../symbols/MaterialIconButtonsFooter";
 import CupertinoFooter1 from "../symbols/CupertinoFooter1";
-import ReactDOM from 'react-dom';
-import * as V from 'victory';
 import { VictoryBar, VictoryChart } from 'victory-native';
 
 
 export default class HomePage extends Component {
+ 
+  constructor(props) {
+    super(props);
+    this.state = { timespan: "week" };
+    this.handler = this.handler.bind(this);
+  }
+  handler(newVal) {
+    console.log("button");
+    this.setState({
+      timespan: newVal
+    })
+    console.log("BUTTON PRESSED!")
+  }
   render() {
+    const timespan = this.state.timespan;
+    console.log("home loaded");
+    // console.log(timespan);
+    console.log("sad");
     const data = [
+      {time: "sat", spent: 500},
       {time: "sun", spent: 500},
       {time: "mon", spent: 200},
       {time: "tue", spent: 150},
       {time: "wed", spent: 400},
       {time: "thu", spent: 350},
       {time: "fri", spent: 41},
-      {time: "sat", spent: 500},
     ];
+    let dollarAmount;
+    if (timespan != null) {
+      if (timespan === "week"){
+        dollarAmount = <Text style={styles.style2}>{this.props.weekD}</Text>
+      } else if (timespan === "month"){
+        dollarAmount = <Text style={styles.style2}>{this.props.monthD}</Text>
+      } else if (timespan === "day"){
+        dollarAmount = <Text style={styles.style2}>{this.props.dayD}</Text>
+      }
+    } else {
+      dollarAmount = <Text style={styles.style2}>{this.props.weekD}</Text>
+    }
+
     return (
       <View style={styles.root}>
         <View style={styles.topNav}>
@@ -48,7 +76,7 @@ export default class HomePage extends Component {
           />
           <Text style={styles.style}>$</Text>
           <Text style={styles.style1}>81</Text>
-          <Text style={styles.style2}>153</Text>
+          {dollarAmount}
         </View>
         <View style={styles.barChart}>
           <VictoryChart>
@@ -130,11 +158,17 @@ export default class HomePage extends Component {
           <MaterialIconButtonsFooter style={styles.materialIconButtonsFooter} />
         </TouchableOpacity>
         <StatusBar hidden={true} style={styles.statusBar} />
-        <CupertinoFooter1 style={styles.cupertinoFooter1} />
+        <CupertinoFooter1 style={styles.cupertinoFooter1} handler = {this.handler}/>
       </View>
     );
   }
 }
+
+HomePage.defaultProps = {
+  dayD: "100",
+  weekD: "150",
+  monthD: "200"
+};
 
 const styles = StyleSheet.create({
   root: {

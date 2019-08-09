@@ -600,7 +600,7 @@ const styles = StyleSheet.create({
     overflow: "hidden"
   },
   cupertinoSearchBarWithMic1: {
-    top: 63.48,
+    top: 50.48,
     left: 19.5,
     width: 375,
     height: 44,
