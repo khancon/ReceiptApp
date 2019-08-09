@@ -5,6 +5,29 @@ import HomePage from './screens/Home.js';
 import PurchasesPage from './screens/Purchases.js'
 import DashboardPage from './screens/Dashboard.js'
 import ProfilePage from './screens/Profile.js'
+var data = require('./csvjson.json'); // forward slashes will depend on the file location
+
+/*
+for(var i = 0; i < data.length; i++) {
+    var obj = data[i];
+
+    console.log("Name: " + obj.Title + ", " + obj.Item_Total);
+}
+*/
+var arrTitle = [];
+var arrItem_Total = [];
+
+for (var x = 0; x < data.length; x++) {
+  var obj = data[x];
+  arrTitle[x] = obj.Title;
+  arrItem_Total[x] = obj.Item_Total;
+}
+
+for (var g = 0; g < arrTitle.length; g++) {
+  console.log("data_entry");
+  console.log(arrTitle[g]);
+  console.log(arrItem_Total[g]);
+}
 
 class HomeScreen extends React.Component {
   render() {

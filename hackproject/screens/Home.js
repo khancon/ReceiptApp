@@ -75,6 +75,7 @@ export default class HomePage extends Component {
               }
             />
           </Svg>
+          <View style={styles.rect11} />
           <Image
             source={require("../assets/images/f06e8fd18ffd07ce380fd129a77b79b5eb7f0bdc.png")}
             style={styles.groceries1}
@@ -98,6 +99,7 @@ export default class HomePage extends Component {
               }
             />
           </Svg>
+          <View style={styles.rect12} />
           <Image
             source={require("../assets/images/ff19e7490d6505c6aed46a719e839ce4f1ac2ad1.png")}
             style={styles.coffeeShop}
@@ -118,6 +120,7 @@ export default class HomePage extends Component {
           </Svg>
           <Text style={styles.style7}>45</Text>
           <Text style={styles.style8}>%</Text>
+          <View style={styles.rect9} />
           <Image
             source={require("../assets/images/45289400d1f3f9c37997ba0048b163a238b47c34.png")}
             style={styles.tshirt}
@@ -153,6 +156,44 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(188,231,132,1)",
     position: "absolute",
     overflow: "hidden"
+  },
+  style8: {
+    top: "44.21%",
+    left: "56.32%",
+    color: "rgba(3,75,86,1)",
+    position: "absolute",
+    fontSize: 20,
+    fontFamily: "avenir-roman"
+  },
+  rect9: {
+    top: 0,
+    left: 64.54,
+    width: 60.91,
+    height: 63.58,
+    backgroundColor: "rgba(255,255,255,1)",
+    position: "absolute"
+  },
+  rect11: {
+    top: -0.2,
+    left: 42.88,
+    width: 42.74,
+    height: 43.28,
+    backgroundColor: "rgba(255,255,255,1)",
+    position: "absolute"
+  },
+  rect12: {
+    top: 0,
+    left: 30.07,
+    width: 40.89,
+    height: 31.38,
+    backgroundColor: "rgba(255,255,255,1)",
+    position: "absolute",
+    shadowOffset: {
+      height: 5,
+      width: 5
+    },
+    shadowColor: "rgba(255,255,255,1)",
+    shadowOpacity: 0.01
   },
   spendingAmt: {
     top: "7.14%",
