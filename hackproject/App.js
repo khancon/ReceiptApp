@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 import HomePage from './screens/Home.js';
 import PurchasesPage from './screens/Purchases.js'
+import DashboardPage from './screens/Dashboard.js'
 
 class HomeScreen extends React.Component {
   render() {
@@ -23,9 +24,7 @@ class PurchasesScreen extends React.Component {
 class AnalyticsScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Analytics!</Text>
-      </View>
+      <DashboardPage />
     );
   }
 }
